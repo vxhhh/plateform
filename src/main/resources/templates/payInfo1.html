@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="i_bg">
+    <div class="content mar_20">
+        <div id="favoriteList"></div>
+        <table>
+            <thead>
+            <th>id</th>
+            <th>title</th>
+            <th>description</th>
+            <th>created</th>
+            </thead>
+            <tbody>
+            <tr th:each="payInfo:${payInfoList.records}">
+                <td th:text="${payInfo.id}"></td>
+                <td th:text="${payInfo.title}"></td>
+                <td th:text="${payInfo.description}"></td>
+                <td th:text="${payInfo.created}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
